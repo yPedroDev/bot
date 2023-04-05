@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const EnvLoader_1 = (0, tslib_1.__importDefault)(require("./class/EnvLoader"));
+EnvLoader_1.default.load();
+const moment_timezone_1 = (0, tslib_1.__importDefault)(require("moment-timezone"));
+moment_timezone_1.default.locale('id');
+moment_timezone_1.default.tz.setDefault(`America/Porto_Velho`);
+const client_1 = (0, tslib_1.__importDefault)(require("./client"));
+client_1.default.start();
